@@ -2,12 +2,12 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/method_post', methods=['GET', 'POST']) #sub 페이지 구성
+@app.route('https://chihioashfa.github.io/rapi/method_post', methods=['GET', 'POST']) #sub 페이지 구성
 def method_post():
 	return render_template('index.html')
 
 #sub페이지를 새로 만드는건 아니고 연결<form method="post" action="/method_post_act">
-@app.route('/method_post_act', methods=['GET', 'POST']) 
+@app.route('https://chihioashfa.github.io/rapi/method_post_act', methods=['GET', 'POST']) 
 def method_get_act():
 	if request.method == 'POST':
 		id = request.form["id"] #form에서 name이 id인 input 값을 받는것
